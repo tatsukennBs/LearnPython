@@ -98,8 +98,35 @@ def execute_set():
     
     # 空のセットを使用する時はset()を使用する
     test_set2 = set()
+    # セット（集合）に要素を追加する（単一の場合はadd,他のセット、リスト、タプルを使用する場合はupdateを使用）
+    test_set2.add("suzuki")
+    test_set2.update({"male",36,1111})
     print(test_set2)
     
+    # セット（集合）から要素を削除する
+    test_set2.remove("male")
+    #test_set2.remove(35) #removeの場合、存在しない要素を削除しようとするとエラーとなる
+    test_set2.discard(36)
+    test_set2.discard(35) #discardの場合エラーとならない
+    print(test_set2)
+    
+    # frozensetは変更不可能なセット
+    test_set3 = frozenset({1111, "suzuki", 36, "male"})
+    #test_set3.add("080-1234-5678") 
+    #test_set3.remove(36)
+    print(test_set3)
+    
+def execute_slice():
+    test_list = ['https', 'www', 'python', 'izm', 'com']
+    # スライスはシーケンスから範囲を指定して要素を取得することができる
+    print(test_list[:4]) #['https', 'www', 'python', 'izm']
+    print(test_list[3:]) #['izm', 'com']
+    print(test_list[1:3]) #['www', 'python']
+    
+    # 要素の代入（置き換え）
+    test_list[1:3] = ("WWW","PYTHON")
+    print(test_list)
+        
 if __name__ == '__main__':
     get_today()
     print("------------")
@@ -108,5 +135,7 @@ if __name__ == '__main__':
     execute_dict()
     print("------------")
     execute_set()
+    print("------------")
+    execute_slice()
     
     
