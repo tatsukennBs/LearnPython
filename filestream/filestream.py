@@ -8,9 +8,9 @@ for row in f:
     print(row, end="")
 
 # ファイルの書き込み
-fw = open("./filestream/inputfile.txt","w")
+fw = open("./filestream/inputfile_out.txt","w")
 count = 0
-while count < 10:
+while count < 20:
     fw.write("Pythonでのファイル書き込みテスト" + str(count+1) + "\n")
     count += 1
 

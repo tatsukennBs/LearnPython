@@ -20,4 +20,9 @@ class Testclass():
 test_static = Testclass.sample_staticmethod(-20)
 print(test_static.year, test_static.month, test_static.day)
 
+print(__package__)
+print(__file__)
+print(__name__)
+
+
 
