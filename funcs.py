@@ -26,7 +26,8 @@ def func_tests_main_args(count, *args):
     print(args)
 
 # 可変長引数(辞書で渡す/keywords arguments)
-def func_tests_main_args2(**kwargs):
+def func_tests_main_args2(code, name, kana, **kwargs):
+    print(f"code={code}, name={name}, kana={kana}")
     print(kwargs)
 
 if __name__ == '__main__':
@@ -37,5 +38,6 @@ if __name__ == '__main__':
     print("------------")
     # 可変長引数はタプルで渡される
     func_tests_main_args(2,"blue","red","green")
-    # 可変長引数はタプルで渡される
-    func_tests_main_args2(id=1, value=12345)
+    # 可変長引数はdict(辞書型)で渡される
+    func_tests_main_args2(100, "python-izm", "パイソンイズム",
+                          id=1, value=12345, city="Tokyo")
