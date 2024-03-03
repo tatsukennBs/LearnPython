@@ -20,6 +20,9 @@ myfunc()
 - json.dumps: dump(吐き出す)してdict→json
 - ダンプ：見たい内容をファイルとかに「ぐへぇ（－Ｏ－）＝３」と吐き出すこと
 - json.loads: loadするのでjson→dict
+```
+true, false, null, NaN, Infinityは大文字小文字が異なっているとエラーになるので注意。例えばTrueなどは変換されない。
+```
 
 # 文字コード関連
 ```
