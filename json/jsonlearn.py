@@ -42,6 +42,16 @@ print("================================================================")
 # jsonのファイルを読み込みし辞書(dict)に変換する場合はjson.load()を使用する。 json.load()
 with open("./json/input.json","r") as f:
     dict = json.load(f)
-
+    
 print(dict)
 print(type(dict))
+
+# 今ある辞書型の要素であれば上書き、なければ追加
+dict['社員']['名前'] = '山田次郎吉'
+dict['社員']['年齢'] = 65
+
+print("================================================================")
+
+# 辞書(dict)を読み込みしjson形式にしてファイル出力する場合はjson.dump()を使用する。 json.dump()
+with open("./json/output.json","w") as f:
+    json.dump(dict, f, indent=2, ensure_ascii=False)
